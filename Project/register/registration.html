@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Check in</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<h1>Registration</h1>
+	<form class="form" method="get" name='form' onsubmit='validate(event)'>
+		<div class="form__row">
+			<label for="form__fname">First name:</label>
+			<input type="text" id="form__fname" name="first_name" placeholder="Andrii">
+			<span id='namef'></span>
+		</div>
+		<div class="form__row">
+			<label for="form__sname">Second name:</label>
+			<input type="text" id="form__sname" name="second_name" placeholder="Petryk">
+			<span id='snamef'></span>
+		</div>
+		<div class="form__row">
+			<label for="form__password">Password:</label>
+			<input type="password" id="form__password" name="password">
+			<span id='passwordf'></span>
+		</div>
+		<div class="form__row">
+			<label for="form__pass">Confirm password:</label>
+			<input type="password" id="form__pass" name="password">
+			<span id='passf'></span>
+		</div>
+		<div class="form__row">
+			<label for="form__phone">Phone number:</label>
+			<input type="text" id="form__phone" name="phone" placeholder="+38094568439">
+			<span id='phonef'></span>
+		</div>
+		<div class="form__row">
+			<label for="form__email">Email:</label>
+			<input type="text" id="form__email" name="email" placeholder="example@gmail.com">
+			<span id='emailf'></span>
+		</div>
+		<div>
+			<p class="form__last">All fields must be required!</p>
+		</div>
+		<div class="form__row">
+			<input type="submit" value="Registration">
+			<p>Or if you have account</p>
+			<input type="button" value="Log in" onclick="javascript:window.location='../login/login.html'" /></input>
+		</div>
+	</form>
+	<script src="register.js"></script>
+</body>
+
+</html>

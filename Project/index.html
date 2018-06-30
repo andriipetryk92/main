@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project</title>
+	<link rel="stylesheet" type="text/css" href="assets/style/reset.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="header__name">
+			<div class="header__name-site">
+				<p><span>M</span>ike.in.usa</p>
+			</div>
+			<div class="header__name-about">
+				<p>Furniture online-store</p>
+			</div>
+		</div>
+		<div class="header__about">
+			<div class='user-name'></div>
+			<div class="header__about__log">
+				<a href="login/login.html" class="header__about__log-login">
+					Log in
+				</a>
+				<div class="header__about__log-logout" onclick="logout()">
+					Log out
+				</div>
+				<div class="header__about__log-register">
+					<a href="register/registration.html">Registration</a>
+				</div>
+			</a>
+		</div>
+		<div class="header__about-down">
+			<img src="assets/img/basket.png" width="30px" height="20px">
+			<p>No products</p>
+		</div>
+	</div>
+</header>
+<nav class="nav">
+	<div class="nav__left">
+		<ul>
+			<li class="nav__left-hidden"><a href="#"><p>Menu</p></a></li>
+			<li><a href="index.html"><p>Main</p></a></li>
+			<li onclick="openDelivery()"><p>Payment&nbsp;and&nbsp;delivery</p></a></li>
+			<li onclick="openContacts()"><p>Contacts</p></li>
+		</ul>
+	</div>
+	<div class="nav__right">
+		<div class="nav__right-search">
+			<form>
+				<input class="d" type="text" name="search" placeholder="Enter word">
+				<input class="s" type="image" src="assets/img/search.png">
+			</form>
+		</div>
+	</div>
+</nav>
+<div class="wrapper">
+	<div class="wrapper__sidebar">
+		<div class="wrapper__sidebar__catalog_name">
+			<p>Catalog</p>
+		</div>
+		<div class="wrapper__sidebar-catalog">
+			<ul>
+				<li>
+					<a href="mattresses/mattresses.html">&#10148;Mattresses</a>
+				</li>
+				<li>
+					<a href="with/with.html">&#10148;Platform Bed Frames with Headboard (no Box spring needed)</a>
+				</li>
+				<li>
+					<a href="without/without.html">&#10148;Platform Bed Frames without Headboard (no Box spring needed)</a>
+				</li>
+				<li>
+					<a href="box/box.html">&#10148;Box spring (easy assemble required)</a>
+				</li>
+				<li>
+					<a href="split/split.html">&#10148;Split Box spring (no assemble required)</a>
+				</li>
+			</ul>
+		</div>
+		<div class="wrapper__sidebar__new">
+			<div class="wrapper__sidebar__new-product">
+				<marquee direction="right">New product</marquee>
+			</div>
+			<div class="wrapper__sidebar__new-image">
+				<a href="#">
+					<img src="assets/img/new.jpg">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper__article">
+		<div class="wrapper__article__carousel">
+			<div class="wrapper__article__carousel-spinner">
+				<img src="assets/img/1.jpg" alt>
+				<img src="assets/img/2.jpg" alt>
+				<img src="assets/img/3.jpg" alt>
+				<img src="assets/img/4.jpg" alt>
+				<img src="assets/img/5.jpg" alt>
+				<img src="assets/img/6.jpg" alt>
+				<img src="assets/img/1.jpg" alt>
+				<img src="assets/img/4.jpg" alt>
+			</div>
+		</div>
+		<span class="wrapper__article__carousel-left" onclick="galleryspin('-')">&lt;</span>
+		<span class="wrapper__article__carousel-right" onclick="galleryspin('')">&gt;</span>
+	</div>
+	<div class="wrapper__contacts">
+		<p class="wrapper__contacts-first">Best Choice for You!</p>
+		<p class="wrapper__contacts-second">My Contacts:</p>
+		<p class="wrapper__contacts-third">Best of all - call me <b>614 809 0678 Mike</b></p>
+		<p class="wrapper__contacts-fourth">or my address</p>
+		<p class="wrapper__contacts-fifth">5718 Bonaventure Dr Columbus, Ohio 43228 (Garage 54)</p>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6115.901191733328!2d-83.1600245708886!3d39.964857263438425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883890c9cc9005c1%3A0x169ccf378512a1ce!2s5718+Bonaventure+Dr+Garage+54%2C+Columbus%2C+OH+43228%2C+%D0%A1%D0%A8%D0%90!5e0!3m2!1sru!2sua!4v1530197124609" width="90%" height="500" frameborder="0" style="border:0;" allowfullscreen></iframe>
+	</div>
+	<div class="wrapper__delivery">
+		<p class="wrapper__delivery-text">Some Text</p>
+	</div>
+	<div class="wrapper__newCarousel">
+		<ul class="wrapper__newCarousel__slides">
+			<li class="wrapper__newCarousel__slides-slide showing">
+				<img src="assets/img/1.jpg">
+			</li>
+			<li class="wrapper__newCarousel__slides-slide">
+				<img src="assets/img/2.jpg">
+			</li>
+			<li class="wrapper__newCarousel__slides-slide">
+				<img src="assets/img/3.jpg">
+			</li>
+		</ul>
+		<div class="wrapper__newCarousel__buttons">
+			<button class="wrapper__newCarousel__buttons-controls" id="previous">&lt;</button>
+			<button class="wrapper__newCarousel__buttons-controls" id="pause">&#10074;&#10074;</button>
+			<button class="wrapper__newCarousel__buttons-controls" id="next">&gt;</button>
+		</div>
+	</div>
+</div>
+</div>
+<hr>
+<footer>
+	<div class="down">
+		<div class="down-left">
+			<ul>
+				<li><a href="#"><p>Menu</p></a></li>
+				<li><a href="../index.html"><p>Main</p></a></li>
+				<li onclick="openDelivery()"><p>Payment&nbsp;and&nbsp;delivery</p></a></li>
+				<li onclick="openContacts()"><p>Contacts</p></li>
+			</ul>
+		</div>
+		<div class="down-right">
+			<p>Copyright&copy;2018 Petryk</p>
+		</div>
+	</div>
+</footer>
+<div id="top">
+	<img src="assets/img/to-top.png">
+</div>
+<script src="libs/jquery-3.3.1.min.js"></script>
+<script src="index.js"></script>
+</body>
+
+</html>

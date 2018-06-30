@@ -1,0 +1,75 @@
+body{
+    background: url(../assets/img/background-register.jpg) no-repeat;
+    background-size: 100%;
+}
+h1 {
+	margin-top: 100px;
+	text-align: center;
+}
+#Loginbutton{
+	width: 100px;
+	margin-left: 277px;
+	margin-bottom: 20px;
+	border: 3px solid black;
+	border-radius: 5px;
+	background-color: grey;
+	padding: 5px;
+}
+.form{
+    width: 660px;
+    margin: 0 auto;
+        &__row{
+        	display: flex;
+        	justify-content: space-between;
+	        margin-bottom: 20px;
+	        overflow: hidden;
+	        & p{
+	        	margin: 0 auto;
+	        	width: 47%;
+	        	font-size: 20px;
+	        	text-align: center;
+	        }
+	        & label{
+	        	width: 245px;
+	        	font-size: 20px;
+	        	font-weight: bold;
+	        	&:hover{ 
+          			color: grey;
+	        	}
+	        }
+	            & input, & button {
+		            float: right;
+		            height: 20px;
+		            padding: 2px 5px;
+		            width: 250px;
+		            border: 1px solid black;
+	            } 
+	            & span{
+	            	width: 165px;
+	            	color: red;
+	            	font-weight: bold;
+	            }
+	            &  input[type="submit"], input[type="button"], & button {
+	            	& a{
+	            		text-decoration: none;
+	            		color: black;
+	            	}
+	            	text-decoration: none;
+	            	color: black;
+	            	height: 30px;
+	            	width: 100%;
+	            	background-color: #97adfc;
+	            	border-radius: 5px;
+	            	transition: 1s;
+	            	&:hover{
+	            		background-color:#fcef97;
+	            		color: red;
+	            		font-size: 15px;
+	            	}
+	            }
+        }
+    &__last{
+    	font-size: 25px;
+    	text-align: center;
+    }
+}
