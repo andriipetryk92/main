@@ -1,5 +1,7 @@
 body {
   background-image: url(assets/img/bg.jpg);
+  background-size: cover;
+  background-position: 100% 100%;
 }
 /* header*/
 .header {
@@ -12,30 +14,29 @@ body {
   /*   START RIGHT HEADER*/
   /* END RIGHT HEADER*/
 }
-.header__name {
-  margin: 30px 15px 30px 15px;
-}
-.header__name-site {
+.header-name {
+  margin: 0 auto;
+  margin-top: 40px;
   font-size: 50px;
 }
-.header__name-site span {
+.header-name a {
+  text-decoration: none;
+}
+.header-name a span {
   color: yellow;
 }
-.header__name-about {
-  font-size: 30px;
+.header-name a p {
+  color: white;
 }
 .header__about {
-  margin: 40px 15px 40px 15px;
+  margin: 40px 0px 40px 15px;
   font-size: 20px;
-}
-.header__about__log {
   display: flex;
+  flex-direction: column;
 }
 .header__about__log-login,
 .header__about__log-register {
-  margin: 5px;
-  padding-right: 10px;
-  border-right: 1px solid white;
+  margin-bottom: 15px;
 }
 .header__about__log-logout:hover {
   color: red;
@@ -80,7 +81,7 @@ body {
   background: linear-gradient(to right, #fceabb 0%, #fccd4d 32%, #f8b500 51%, #fbdf93 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fceabb', endColorstr='#fbdf93', GradientType=1);
 }
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
   .nav__left {
     position: relative;
     min-height: 39px;
@@ -91,7 +92,7 @@ body {
 .nav__left ul {
   z-index: 5;
 }
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
   .nav__left ul {
     text-align: center;
     border-radius: 5px;
@@ -113,17 +114,17 @@ body {
   border-radius: 5px;
   background: white;
 }
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
   .nav__left ul li:hover {
     background: grey;
   }
 }
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
   .nav__left ul li {
     display: none;
   }
 }
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
   .nav__left ul li p {
     line-height: 0px;
   }
@@ -143,7 +144,7 @@ body {
 .nav__right {
   width: 30%;
 }
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
   .nav__right {
     width: 0px;
   }
@@ -176,9 +177,14 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .wrapper__sidebar {
     width: 200px;
+  }
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  .wrapper__sidebar {
+    display: none;
   }
 }
 .wrapper__sidebar__catalog_name {
@@ -236,10 +242,46 @@ body {
 }
 .wrapper__delivery {
   display: none;
-  margin: 200px auto;
+  margin: 50px auto;
+  width: 77%;
 }
-.wrapper__delivery-text {
-  font-size: 50px;
+.wrapper__delivery-main {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.wrapper__delivery-how {
+  font-size: 20px;
+  margin: 30px;
+}
+.wrapper__delivery table {
+  margin: 0 auto;
+  width: 400px;
+  text-align: center;
+  font-size: 20px;
+}
+@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
+  .wrapper__delivery table {
+    width: 200px;
+  }
+}
+.wrapper__delivery table caption {
+  margin-bottom: 20px;
+}
+.wrapper__delivery table tr {
+  margin-top: 20px;
+  width: 150px;
+}
+.wrapper__delivery table tr th {
+  font-size: 25px;
+  border: 1px solid;
+}
+.wrapper__delivery table tr td {
+  font-size: 20px;
+  border: 1px solid;
+}
+.wrapper__delivery-end {
+  font-size: 20px;
 }
 .wrapper__contacts {
   display: none;
@@ -270,10 +312,37 @@ body {
 .wrapper__article {
   width: 80%;
 }
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .wrapper__article {
     display: none;
   }
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  .wrapper__article {
+    width: 100%;
+  }
+}
+.wrapper__article__categories ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.wrapper__article__categories ul li {
+  margin: 30px;
+}
+.wrapper__article__categories ul li a {
+  text-decoration: none;
+}
+.wrapper__article__categories ul li a img {
+  width: 100%;
+}
+.wrapper__article__categories ul li a p {
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .wrapper__article__mattresses__first,
 .wrapper__article__with__first,
@@ -455,6 +524,11 @@ body {
   margin-bottom: 3rem;
   overflow: hidden;
 }
+@media (min-width: 320px) and (max-width: 479px) {
+  .wrapper__article__carousel {
+    display: none;
+  }
+}
 .wrapper__article__carousel-spinner {
   transform-style: preserve-3d;
   height: 400px;
@@ -505,6 +579,12 @@ body {
   border-bottom: none;
   line-height: 0;
 }
+@media (min-width: 320px) and (max-width: 479px) {
+  .wrapper__article__carousel-left,
+  .wrapper__article__carousel-right {
+    display: none;
+  }
+}
 .wrapper__article__carousel-left:hover,
 .wrapper__article__carousel-right:hover {
   color: #888;
@@ -519,11 +599,11 @@ body {
 .wrapper__newCarousel {
   display: none;
 }
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .wrapper__newCarousel {
     display: block;
     position: relative;
-    width: 100%;
+    width: 66%%;
     height: 100%;
   }
 }
@@ -591,7 +671,7 @@ footer .down {
   display: flex;
   justify-content: space-between;
 }
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
   footer .down-left ul li:nth-child(-n+3) {
     display: none;
     font-size: 30px;
@@ -622,7 +702,7 @@ footer .down-right p {
 nav ul .nav__left-hidden {
   display: none;
 }
-@media (min-width: 100px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
   nav ul .nav__left-hidden {
     display: block;
   }
@@ -641,4 +721,5 @@ nav ul .nav__left-hidden {
   padding: 15px;
   border-radius: 50%;
   background: black;
+  z-index: 20;
 }

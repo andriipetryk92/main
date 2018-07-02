@@ -1,6 +1,7 @@
 body {
   background: url(../assets/img/background-register.jpg) no-repeat;
   background-size: 100%;
+  background-size: cover;
 }
 h1 {
   margin-top: 100px;
@@ -8,22 +9,22 @@ h1 {
 }
 #Loginbutton {
   width: 100px;
-  margin-left: 277px;
+  display: block;
+  margin: 0 auto;
   margin-bottom: 20px;
   border: 3px solid black;
   border-radius: 5px;
   background-color: grey;
   padding: 5px;
+  cursor: pointer;
 }
 .form {
-  width: 660px;
   margin: 0 auto;
 }
 .form__row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 20px;
-  overflow: hidden;
 }
 .form__row p {
   margin: 0 auto;
@@ -44,7 +45,6 @@ h1 {
   float: right;
   height: 20px;
   padding: 2px 5px;
-  width: 250px;
   border: 1px solid black;
 }
 .form__row span {
@@ -57,8 +57,10 @@ h1 {
 .form__row button {
   text-decoration: none;
   color: black;
+  cursor: pointer;
+  margin: 0 auto;
   height: 30px;
-  width: 100%;
+  width: 200px;
   background-color: #97adfc;
   border-radius: 5px;
   transition: 1s;

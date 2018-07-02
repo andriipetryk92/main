@@ -81,9 +81,9 @@ function checkUser() {
         document.getElementsByClassName('header__about__log-login')[0].style.display = 'none';
         document.getElementsByClassName('header__about__log-register')[0].style.display = 'none';
         document.getElementsByClassName('header__about__log-logout')[0].style.cssText= 'display:block; margin-top:25px; cursor: pointer';
-        document.getElementsByClassName('user-name')[0].innerHTML = enter.email;
+        document.getElementsByClassName('user-name')[0].innerHTML = enter.firstName;
         document.getElementsByClassName('user-name')[0].style.cssText='text-shadow: 5px 5px 5px red';
-        document.getElementsByClassName('header__about-down')[0].style.cssText= 'margin:-19px 0 0 97px;; cursor: pointer';
+        document.getElementsByClassName('header__about-down')[0].style.cssText= 'margin:20px 0 0 -41px; cursor: pointer';
     } else {
         document.getElementsByClassName('header__about__log-login')[0].style.display = 'block';
          document.getElementsByClassName('header__about__log-register')[0].style.display = 'block';
@@ -99,9 +99,10 @@ function logout() {
     checkUser();
 }
 
-    var top_show = 150; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
+    var top_show = 15; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
     var delay = 1000; // Задержка прокрутки
     $(document).ready(function() {
+        $('#top').removeAttr("style").hide();
         $(window).scroll(function () { // При прокрутке попадаем в эту функцию
             /* В зависимости от положения полосы прокрукти и значения top_show, скрываем или открываем кнопку "Наверх" */
             if ($(this).scrollTop() > top_show) $('#top').fadeIn();
