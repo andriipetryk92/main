@@ -200,6 +200,9 @@ body{
                 text-decoration: none;
                 color: black;
                 font-size: 22px;
+                @media @tablets{
+                    font-size: 19px;
+                }
                 &:hover{
                     color: red;
                 }
@@ -305,13 +308,12 @@ body{
                 width: 100%;
             } 
         &__mattresses, &__with, &__without, &__box, &__split{
+            margin: 2%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
             &__first, &__second, &__third, &__fourth, &__fifth, &__sixth{
-                width: 46%;
-                margin: 2%;
-                height: 300px;
-                display: block;
-                float: left;
-                overflow: hidden;
+                margin: 20px;
                 & p{
                     margin-bottom: 15px;
                     text-shadow: 3px 3px 3px black;

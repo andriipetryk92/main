@@ -1,6 +1,5 @@
 body {
-  background: url(../assets/img/background-register.jpg);
-  background-size: 100%;
+  background: url(../assets/img/background-register.jpg) no-repeat;
   background-size: cover;
 }
 h1 {

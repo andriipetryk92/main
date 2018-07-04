@@ -65,8 +65,7 @@ body {
   background-color: #88a0f7;
   display: flex;
   align-items: center;
-  width: 90%;
-  margin: 0 auto;
+  margin: 0 50px;
   border-radius: 10px;
   /*START LEFT NAV*/
   /*END LEFT NAV*/
@@ -81,7 +80,7 @@ body {
   background: linear-gradient(to right, #fceabb 0%, #fccd4d 32%, #f8b500 51%, #fbdf93 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fceabb', endColorstr='#fbdf93', GradientType=1);
 }
-@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
+@media  only screen and (min-width: 480px) and (max-width: 767px),  only screen and (min-width: 200px) and (max-width: 479px) {
   .nav__left {
     position: relative;
     min-height: 39px;
@@ -92,7 +91,7 @@ body {
 .nav__left ul {
   z-index: 5;
 }
-@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
+@media  only screen and (min-width: 480px) and (max-width: 767px),  only screen and (min-width: 200px) and (max-width: 479px) {
   .nav__left ul {
     text-align: center;
     border-radius: 5px;
@@ -114,17 +113,17 @@ body {
   border-radius: 5px;
   background: white;
 }
-@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
+@media  only screen and (min-width: 480px) and (max-width: 767px),  only screen and (min-width: 200px) and (max-width: 479px) {
   .nav__left ul li:hover {
     background: grey;
   }
 }
-@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
+@media  only screen and (min-width: 480px) and (max-width: 767px),  only screen and (min-width: 200px) and (max-width: 479px) {
   .nav__left ul li {
     display: none;
   }
 }
-@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
+@media  only screen and (min-width: 480px) and (max-width: 767px),  only screen and (min-width: 200px) and (max-width: 479px) {
   .nav__left ul li p {
     line-height: 0px;
   }
@@ -144,7 +143,7 @@ body {
 .nav__right {
   width: 30%;
 }
-@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
+@media  only screen and (min-width: 480px) and (max-width: 767px),  only screen and (min-width: 200px) and (max-width: 479px) {
   .nav__right {
     width: 0px;
   }
@@ -163,8 +162,7 @@ body {
 /*START WRAPPER*/
 .wrapper {
   background-color: #f2f9fc;
-  width: 90%;
-  margin: 0 auto;
+  margin: 0 50px;
   display: flex;
   flex-wrap: nowrap;
   /*START SIDEBAR*/
@@ -177,12 +175,12 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 480px) and (max-width: 767px) {
+@media  only screen and (min-width: 480px) and (max-width: 767px) {
   .wrapper__sidebar {
     width: 200px;
   }
 }
-@media (min-width: 320px) and (max-width: 479px) {
+@media  only screen and (min-width: 200px) and (max-width: 479px) {
   .wrapper__sidebar {
     display: none;
   }
@@ -260,7 +258,7 @@ body {
   text-align: center;
   font-size: 20px;
 }
-@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
+@media  only screen and (min-width: 480px) and (max-width: 767px),  only screen and (min-width: 200px) and (max-width: 479px) {
   .wrapper__delivery table {
     width: 200px;
   }
@@ -312,12 +310,12 @@ body {
 .wrapper__article {
   width: 80%;
 }
-@media (min-width: 480px) and (max-width: 767px) {
+@media  only screen and (min-width: 480px) and (max-width: 767px) {
   .wrapper__article {
     display: none;
   }
 }
-@media (min-width: 320px) and (max-width: 479px) {
+@media  only screen and (min-width: 200px) and (max-width: 479px) {
   .wrapper__article {
     width: 100%;
   }
@@ -343,6 +341,16 @@ body {
   color: black;
   text-align: center;
   margin-bottom: 20px;
+}
+.wrapper__article__mattresses,
+.wrapper__article__with,
+.wrapper__article__without,
+.wrapper__article__box,
+.wrapper__article__split {
+  margin: 2%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .wrapper__article__mattresses__first,
 .wrapper__article__with__first,
@@ -374,12 +382,7 @@ body {
 .wrapper__article__without__sixth,
 .wrapper__article__box__sixth,
 .wrapper__article__split__sixth {
-  width: 46%;
-  margin: 2%;
-  height: 300px;
-  display: block;
-  float: left;
-  overflow: hidden;
+  margin: 20px;
 }
 .wrapper__article__mattresses__first p,
 .wrapper__article__with__first p,
@@ -524,7 +527,7 @@ body {
   margin-bottom: 3rem;
   overflow: hidden;
 }
-@media (min-width: 320px) and (max-width: 479px) {
+@media  only screen and (min-width: 200px) and (max-width: 479px) {
   .wrapper__article__carousel {
     display: none;
   }
@@ -579,7 +582,7 @@ body {
   border-bottom: none;
   line-height: 0;
 }
-@media (min-width: 320px) and (max-width: 479px) {
+@media  only screen and (min-width: 200px) and (max-width: 479px) {
   .wrapper__article__carousel-left,
   .wrapper__article__carousel-right {
     display: none;
@@ -599,7 +602,7 @@ body {
 .wrapper__newCarousel {
   display: none;
 }
-@media (min-width: 480px) and (max-width: 767px) {
+@media  only screen and (min-width: 480px) and (max-width: 767px) {
   .wrapper__newCarousel {
     display: block;
     position: relative;
@@ -653,7 +656,6 @@ body {
   color: #333;
 }
 footer {
-  width: 100%;
   background: #f8f5ff;
   /* Old browsers */
   background: -moz-radial-gradient(center, ellipse cover, #f8f5ff 0%, #ddd7e5 40%, #b8aebe 100%);
@@ -666,12 +668,11 @@ footer {
   /* IE6-9 fallback on horizontal gradient */
 }
 footer .down {
-  width: 90%;
-  margin: 0 auto;
+  margin: 0 50px;
   display: flex;
   justify-content: space-between;
 }
-@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
+@media  only screen and (min-width: 480px) and (max-width: 767px),  only screen and (min-width: 200px) and (max-width: 479px) {
   footer .down-left ul li:nth-child(-n+3) {
     display: none;
     font-size: 30px;
@@ -702,7 +703,7 @@ footer .down-right p {
 nav ul .nav__left-hidden {
   display: none;
 }
-@media (min-width: 480px) and (max-width: 767px), (min-width: 320px) and (max-width: 479px) {
+@media  only screen and (min-width: 480px) and (max-width: 767px),  only screen and (min-width: 200px) and (max-width: 479px) {
   nav ul .nav__left-hidden {
     display: block;
   }

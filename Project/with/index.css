@@ -213,6 +213,11 @@ body {
   color: black;
   font-size: 22px;
 }
+@media (min-width: 480px) and (max-width: 767px) {
+  .wrapper__sidebar-catalog a {
+    font-size: 19px;
+  }
+}
 .wrapper__sidebar-catalog a:hover {
   color: red;
 }
@@ -317,6 +322,16 @@ body {
     width: 100%;
   }
 }
+.wrapper__article__mattresses,
+.wrapper__article__with,
+.wrapper__article__without,
+.wrapper__article__box,
+.wrapper__article__split {
+  margin: 2%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 .wrapper__article__mattresses__first,
 .wrapper__article__with__first,
 .wrapper__article__without__first,
@@ -347,12 +362,7 @@ body {
 .wrapper__article__without__sixth,
 .wrapper__article__box__sixth,
 .wrapper__article__split__sixth {
-  width: 46%;
-  margin: 2%;
-  height: 300px;
-  display: block;
-  float: left;
-  overflow: hidden;
+  margin: 20px;
 }
 .wrapper__article__mattresses__first p,
 .wrapper__article__with__first p,
