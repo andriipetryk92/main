@@ -1,31 +1,32 @@
 function openContacts() {
-    document.getElementsByClassName('wrapper__article')[0].style.display = 'none';
-    document.getElementsByClassName('wrapper__delivery')[0].style.display = 'none';
-    document.getElementsByClassName('wrapper__contacts')[0].style.display = 'block';
+    $('.wrapper__article').css("display", "none");
+    $('.wrapper__delivery').css("display", "none");
+    $('.wrapper__contacts').css("display", "block");
 }
 function openDelivery(){
-    document.getElementsByClassName('wrapper__article')[0].style.display = 'none';
-    document.getElementsByClassName('wrapper__delivery')[0].style.display = 'block';
-    document.getElementsByClassName('wrapper__contacts')[0].style.display = 'none';
+    $('.wrapper__article').css("display", "none");
+    $('.wrapper__delivery').css("display", "block");
+    $('.wrapper__contacts').css("display", "none");
 }
+
 var loginParseData;
 var enter;
 function checkUser() {
     loginParseData = localStorage.getItem('data');
     enter = JSON.parse(loginParseData);
     if (enter && enter.email && enter.login) {
-        document.getElementsByClassName('header__about__log-login')[0].style.display = 'none';
-        document.getElementsByClassName('header__about__log-register')[0].style.display = 'none';
-        document.getElementsByClassName('header__about__log-logout')[0].style.cssText= 'display:block; margin-top:25px; cursor: pointer';
-        document.getElementsByClassName('user-name')[0].innerHTML = enter.firstName;
-        document.getElementsByClassName('user-name')[0].style.cssText='text-shadow: 5px 5px 5px red';
-        document.getElementsByClassName('header__about-down')[0].style.cssText= 'margin:20px 0 0 -41px; cursor: pointer';
+        $('.header__about__log-login').css("display", "none");
+        $('.header__about__log-register').css("display", "none");
+        $('.header__about__log-logout').css({"display":"block", "margin-top":"25px", "cursor": "pointer"});
+        $('.user-name').text(enter.firstName);
+        $('.user-name').css("text-shadow", "5px 5px 5px red");
+        $('.header__about-down').css({"margin":"20px 0px 0px -18px", "cursor": "pointer"});
     } else {
-        document.getElementsByClassName('header__about__log-login')[0].style.display = 'block';
-         document.getElementsByClassName('header__about__log-register')[0].style.display = 'block';
-        document.getElementsByClassName('header__about__log-logout')[0].style.display = 'none';
-        document.getElementsByClassName('user-name')[0].innerHTML = '';
-         document.getElementsByClassName('header__about-down')[0].style.cssText='none';
+        $('.header__about__log-login').css("display", "block");
+        $('.header__about__log-register').css("display", "block");
+        $('.header__about__log-logout').css("display", "none");
+        $('.user-name').text('');
+        $('.header__about-down').css("style", "none");
     }
 }
 checkUser();
@@ -35,19 +36,62 @@ function logout() {
     checkUser();
 }
 
-    var top_show = 150; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
-    var delay = 1000; // Задержка прокрутки
+    
+    var top_show = 150; 
+    var delay = 1000; 
     $(document).ready(function() {
         $('#top').removeAttr("style").hide();
-        $(window).scroll(function () { // При прокрутке попадаем в эту функцию
-            /* В зависимости от положения полосы прокрукти и значения top_show, скрываем или открываем кнопку "Наверх" */
+        $(window).scroll(function () { 
+            
             if ($(this).scrollTop() > top_show) $('#top').fadeIn();
             else $('#top').fadeOut();
         });
-        $('#top').click(function () { // При клике по кнопке "Наверх" попадаем в эту функцию
-            /* Плавная прокрутка наверх */
+        $('#top').click(function () { 
+           
             $('body, html').animate({
                 scrollTop: 0
             }, delay);
         });
     });
+
+$(document).ready(function() {
+    $('#basket').click( function(event){
+        event.preventDefault();
+        $('#overlay').fadeIn(400, 
+            function(){ 
+                $('#modal_form') 
+                    .css({'display': 'flex', 'flex-direction': 'column'}) 
+                    .animate({opacity: 1, top: '50%'}, 200); 
+        });
+    });
+   
+    $('#modal_close, #overlay').click( function(){ 
+        $('#modal_form')
+            .animate({opacity: 0, top: '45%'}, 200,  
+                function(){
+                    $(this).css('display', 'none'); 
+                    $('#overlay').fadeOut(400); 
+                }
+            );
+    });
+});
+
+
+var basketItems = [];
+var currentItem = {};
+
+function showItem(id){
+    for(var i =0; i< products.length; i++){
+        if(id === products[i].id){
+            currentItem = products[i];
+            var pName = products[i].name;
+            var price = products[i].price;
+            $("#name").html(name);
+            $("#price").html(price + " $");
+        }
+    }
+}
+function addToBasket(){
+    basketItems.push(currentItem);
+    console.log(basketItems);
+}

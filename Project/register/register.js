@@ -2,49 +2,48 @@
 function validate(event) {
     event.preventDefault();
     var validate = true;
-    var firstName = document.getElementById('form__fname').value;
-    var secondName = document.getElementById('form__sname').value;
-    var email = document.getElementById('form__email').value;
-    var password = document.getElementById('form__password').value;
-    var phone = document.getElementById('form__phone').value;
+    var firstName = $('#form__fname').val();
+    var secondName = $('#form__sname').val();
+    var email = $('#form__email').val();
+    var password = $('#form__password').val();
+    var phone = $('#form__phone').val();
     if (!firstName.length) {
-        document.getElementById('namef').innerHTML = '*This field is required';
+        $("#namef").text('*This field is required');
         validate = false;
     }
     if (!secondName.length) {
-        document.getElementById('snamef').innerHTML = '*This field is required';
+        $('#snamef').text('*This field is required');
         validate = false;
     }
     if (password.length < 6) {
-        document.getElementById('passwordf').innerHTML = '*More than 6 wods';
+        $('#passwordf').text('*More than 6 wods');
         validate = false;
     }
-    if (document.getElementById('form__password').value !== document.getElementById('form__pass').value) {
-        document.getElementById('passf').innerHTML = '*Different passwords';
+    if ($('#form__password').val() !== $('#form__pass').val()) {
+        $('#passf').text('*Different passwords');
         validate = false;
     }
     if (phone.length < 7) {
-        document.getElementById('phonef').innerHTML = '*Where is a number?';
+        $('#phonef').text('*Where is a number?');
         validate = false;
     }
     if (!/^\+3/.test(phone)) {
-        document.getElementById('phonef').innerHTML = '*Enter correct number';
+        $('#phonef').text('*Enter correct number');
         validate = false;
     }
     if (!email.length) {
-        document.getElementById('emailf').innerHTML = '*This field is required'
+        $('#emailf').text('*This field is required');
         validate = false;
-        // return false;
     }
     dog = email.indexOf("@");
     dot = email.indexOf(".");
     if (dog < 1 || dot < 1) {
-        document.getElementById('emailf').innerHTML = '*Email is not correct';
+        $('#emailf').text('*Email is not correct');
         validate = false;
     }
     if (validate) {
         var user = {
-            firstName: firstName, phone: phone, email: email, password: password
+            firstName: firstName, secondName: secondName, phone: phone, email: email, password: password
         };
         var localData = JSON.stringify(user);
         localStorage.setItem("data", localData);

@@ -28,11 +28,24 @@
 			</a>
 		</div>
 		<div class="header__about-down">
-			<img src="../assets/img/basket.png" width="30px" height="20px"><p>No products</p>
+			<img src="../assets/img/basket.png" width="40px" height="30px">
+			<button id="basket">Basket</button>
 		</div>
 	</div>
 </div>
 </header>
+<div id="modal_form">
+      <span id="modal_close">X</span>
+        <div>
+      	  <span>Name: </span><span id="name"></span>
+      	</div>
+      <div><span>Price: </span><span id="price"></span></div>
+      <div class="downBt">
+      <button type="button" class="close">Close</button>
+      <button type="button" class="order" onclick="addToBasket()">Buy</button>
+      </div>
+</div>
+<div id="overlay"></div>
 <nav class="nav">
 	<div class="nav__left">
 		<ul>
@@ -41,14 +54,6 @@
 			<li onclick="openDelivery()"><p>Payment&nbsp;and&nbsp;delivery</p></a></li>
 			<li onclick="openContacts()"><p>Contacts</p></li>
 		</ul>
-	</div>
-	<div class="nav__right">
-		<div class="nav__right-search">
-			<form>
-				<input class="d" type="text" name="search" placeholder="Enter word">
-				<input class="s" type="image" src="../assets/img/search.png">
-			</form>
-		</div>
 	</div>
 </nav>
 <div class="wrapper">
@@ -96,7 +101,7 @@
 					<a href="first.html"><img src="../assets/img/with/1/1.jpg" alt="Mattres"></a>
 				</div>
 				<div class="wrapper__article__with__first-price">
-					<p>100$</p><button id="7">Buy</button>
+					<p>100$</p><button id="7" onclick="addToBasket()">Buy</button>
 				</div>
 			</div>
 			<div class="wrapper__article__with__second">
@@ -107,7 +112,7 @@
 					<a href="second.html"><img src="../assets/img/with/2/2.jpg" alt="Mattres"></a>
 				</div>
 				<div class="wrapper__article__with__second-price">
-					<p>200$</p><button id="8">Buy</button>
+					<p>200$</p><button id="8" onclick="addToBasket()">Buy</button>
 				</div>
 			</div>
 			<div class="wrapper__article__with__third">
@@ -118,7 +123,7 @@
 					<a href="third.html"><img src="../assets/img/with/3/3.jpg" alt="Mattres"></a>
 				</div>
 				<div class="wrapper__article__with__third-price">
-					<p>300$</p><button id="9">Buy</button>
+					<p>300$</p><button id="9" onclick="addToBasket()">Buy</button>
 				</div>
 			</div>
 			<div class="wrapper__article__with__fourth">
@@ -129,7 +134,7 @@
 					<a href="fourth.html"><img src="../assets/img/with/4/4.jpg" alt="Mattres"></a>
 				</div>
 				<div class="wrapper__article__with__fourth-price">
-					<p>400$</p><button id="10">Buy</button>
+					<p>400$</p><button id="10" onclick="addToBasket()">Buy</button>
 				</div>
 			</div>
 			<div class="wrapper__article__with__fifth">
@@ -140,7 +145,7 @@
 					<a href="fifth.html"><img src="../assets/img/with/5/5.jpg" alt="Mattres"></a>
 				</div>
 				<div class="wrapper__article__with__fifth-price">
-					<p>500$</p><button id="11">Buy</button>
+					<p>500$</p><button id="11" onclick="addToBasket()">Buy</button>
 				</div>
 			</div>
 			<div class="wrapper__article__with__sixth">
@@ -151,7 +156,7 @@
 					<a href="sixth.html"><img src="../assets/img/with/6/6.jpg" alt="Mattres"></a>
 				</div>
 				<div class="wrapper__article__with__sixth-price">
-					<p>600$</p><button id="12">Buy</button>
+					<p>600$</p><button id="12" onclick="addToBasket()">Buy</button>
 				</div>
 			</div>
 		</div>

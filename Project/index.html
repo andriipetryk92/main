@@ -28,11 +28,26 @@
 			</a>
 		</div>
 		<div class="header__about-down">
-			<img src="assets/img/basket.png" width="30px" height="20px">
-			<p>No products</p>
+			<img src="assets/img/basket.png" width="40px" height="30px">
+			<button id="basket">Basket</button>
 		</div>
 	</div>
 </header>
+<div id="modal_form">
+    <span id="modal_close">X</span>
+    <div>
+      	<span>Name: </span><span id="name"></span>
+    </div>
+    <div>
+    	<span>Price: </span>
+    	<span id="price"></span>
+    </div>
+    <div class="downBt">
+       <button type="button" class="close">Close</button>
+       <button type="button" class="order" onclick="addToBasket()">Buy</button>
+    </div>
+</div>
+<div id="overlay"></div>
 <nav class="nav">
 	<div class="nav__left">
 		<ul>
@@ -41,14 +56,6 @@
 			<li onclick="openDelivery()"><p>Payment&nbsp;and&nbsp;delivery</p></a></li>
 			<li onclick="openContacts()"><p>Contacts</p></li>
 		</ul>
-	</div>
-	<div class="nav__right">
-		<div class="nav__right-search">
-			<form>
-				<input class="d" type="text" name="search" placeholder="Enter word">
-				<input class="s" type="image" src="assets/img/search.png">
-			</form>
-		</div>
 	</div>
 </nav>
 <div class="wrapper">
@@ -442,6 +449,7 @@
 	<img src="assets/img/to-top.png">
 </div>
 <script src="libs/jquery-3.3.1.min.js"></script>
+<script src="products.js"></script>
 <script src="index.js"></script>
 </body>
 
