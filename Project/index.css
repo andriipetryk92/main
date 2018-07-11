@@ -94,16 +94,27 @@ body {
   }
 }
 .nav__left ul {
-  z-index: 2;
+  z-index: 5;
 }
 @media  only screen and (min-width: 480px) and (max-width: 767px),  only screen and (min-width: 10px) and (max-width: 479px) {
   .nav__left ul {
+    background: #BBD2C5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #292e49, #536976, #bbd2c5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #292e49, #536976, #bbd2c5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     text-align: center;
     border-radius: 5px;
     width: 100%;
-    background: white;
   }
   .nav__left ul:hover li {
+    background: #373B44;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #4286f4, #373b44);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #4286f4, #373b44);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     display: block;
     border: 1px solid black;
     border-radius: 5px;
@@ -120,7 +131,11 @@ body {
 }
 @media  only screen and (min-width: 480px) and (max-width: 767px),  only screen and (min-width: 10px) and (max-width: 479px) {
   .nav__left ul li:hover {
-    background: grey;
+    background: #BBD2C5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #292e49, #536976, #bbd2c5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #292e49, #536976, #bbd2c5);
   }
 }
 @media  only screen and (min-width: 480px) and (max-width: 767px),  only screen and (min-width: 10px) and (max-width: 479px) {
@@ -539,10 +554,10 @@ body {
   transition: 1s;
 }
 .wrapper__article__carousel-spinner img {
-  max-width: 390px;
+  width: 50%;
   position: absolute;
   height: 320px;
-  left: 31%;
+  left: 25%;
   transform-origin: 50% 50% -500px;
   outline: 1px solid transparent;
 }

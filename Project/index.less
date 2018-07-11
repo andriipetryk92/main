@@ -92,18 +92,23 @@ body{
         	justify-content: flex-end;
         };
         & ul{
-        	z-index: 2;
-        	@media @tablets, @smartphone{
-        		text-align: center;
+            z-index: 5;
+            @media @tablets, @smartphone{
+                background: #BBD2C5;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to top, #292E49, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to top, #292E49, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                text-align: center;
                 border-radius: 5px;
                 width: 100%;
-                background: white;
                 &:hover li{
+                    background: #373B44;  /* fallback for old browsers */
+                    background: -webkit-linear-gradient(to top, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+                    background: linear-gradient(to top, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                     display: block;
                     border: 1px solid black;
                     border-radius: 5px;
-                };
-            };
+                }
+            }
             & li{
                 display: inline-block;
                 cursor: pointer;
@@ -112,21 +117,23 @@ body{
                     border-radius: 5px;
                     background: white;
                     @media @tablets, @smartphone{
-                        background: grey;
-                    };
-                };
+                        background: #BBD2C5;  /* fallback for old browsers */
+                        background: -webkit-linear-gradient(to top, #292E49, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+                        background: linear-gradient(to top, #292E49, #536976, #BBD2C5);
+                    }
+                }
                 @media @tablets, @smartphone{
                     display: none;
-                };
+                }
                 p{
                     @media @tablets, @smartphone{
                     line-height: 0px;
-                    };
-                };
+                    }
+                }
                 & a{
                     text-decoration: none;
 
-                };
+                }
                 & p{
                     font-family: Bradley Hand, cursive;
                     line-height: 39px;
@@ -135,12 +142,12 @@ body{
                     &:hover{
                         color: #164f0d;
                         color: red;
-                    };
-                };
-            };
-        };
-    };
-};
+                    }
+                }
+            }
+        }
+    }
+}
 /*END NAV*/
 /*START WRAPPER*/
 .wrapper{
@@ -370,10 +377,10 @@ body{
                 transform-origin: 50% 50% -500px; 
                 transition: 1s;
                 & img {
-                    max-width: 390px; 
+                    width: 50%; 
                     position: absolute;
                     height: 320px;
-                    left: 31%;
+                    left: 25%;
                     transform-origin: 50% 50% -500px;
                     outline:1px solid transparent; 
                 };

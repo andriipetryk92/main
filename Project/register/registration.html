@@ -10,7 +10,7 @@
 	<h1>Registration</h1>
 	<form class="form" method="get" name='form' onsubmit='validate(event)'>
 		<div class="form__row">
-			<label for="form__fname">First name:</label>
+			<label for="form__fname">First name:*</label>
 			<input type="text" id="form__fname" name="first_name" placeholder="Andrii">
 			<span id='namef'></span>
 		</div>
@@ -20,27 +20,24 @@
 			<span id='snamef'></span>
 		</div>
 		<div class="form__row">
-			<label for="form__password">Password:</label>
+			<label for="form__password">Password:*</label>
 			<input type="password" id="form__password" name="password">
 			<span id='passwordf'></span>
 		</div>
 		<div class="form__row">
-			<label for="form__pass">Confirm password:</label>
+			<label for="form__pass">Confirm password:*</label>
 			<input type="password" id="form__pass" name="password">
 			<span id='passf'></span>
 		</div>
 		<div class="form__row">
-			<label for="form__phone">Phone number:</label>
+			<label for="form__phone">Phone number:*</label>
 			<input type="text" id="form__phone" name="phone" placeholder="+38094568439">
 			<span id='phonef'></span>
 		</div>
 		<div class="form__row">
-			<label for="form__email">Email:</label>
+			<label for="form__email">Email:*</label>
 			<input type="text" id="form__email" name="email" placeholder="example@gmail.com">
 			<span id='emailf'></span>
-		</div>
-		<div>
-			<p class="form__last">All fields must be required!</p>
 		</div>
 		<div class="form__row end">
 			<input type="submit" value="Registration">

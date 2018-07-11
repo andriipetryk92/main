@@ -1,6 +1,7 @@
-body {
-  background: url(../assets/img/background-register.jpg) no-repeat;
-  background-size: cover;
+html{
+    background: url(../assets/img/background-register.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 h1 {
   margin-top: 100px;
@@ -75,10 +76,6 @@ h1 {
   background-color: #fcef97;
   color: red;
   font-size: 15px;
-}
-.form__last {
-  font-size: 25px;
-  text-align: center;
 }
 .end {
   display: flex;

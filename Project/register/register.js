@@ -11,10 +11,6 @@ function validate(event) {
         $("#namef").text('*This field is required');
         validate = false;
     }
-    if (!secondName.length) {
-        $('#snamef').text('*This field is required');
-        validate = false;
-    }
     if (password.length < 6) {
         $('#passwordf').text('*More than 6 wods');
         validate = false;
@@ -31,13 +27,7 @@ function validate(event) {
         $('#phonef').text('*Enter correct number');
         validate = false;
     }
-    if (!email.length) {
-        $('#emailf').text('*This field is required');
-        validate = false;
-    }
-    dog = email.indexOf("@");
-    dot = email.indexOf(".");
-    if (dog < 1 || dot < 1) {
+    if (!/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i.test(email)) {
         $('#emailf').text('*Email is not correct');
         validate = false;
     }

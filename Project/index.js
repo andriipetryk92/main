@@ -61,8 +61,8 @@ pauseButton.onclick = function(){
     else{ playSlideshow(); }
 };
 
-var next = $('#next');
-var previous = $('#previous');
+var next = document.getElementById('next');
+var previous = document.getElementById('previous');
 
 next.onclick = function(){
     pauseSlideshow();
