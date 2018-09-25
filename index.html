@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="container"></div>
+<script>
+
+        let money = ['USA', 'Euro', 'RUB', 'GBR', 'BLR', 'USA/EURO'];
+        let value = [28, 32, 0.3, 40, 0.1];
+        let last = value[0] / value[1];
+        value.push(last);
+        let html = '<table border="1" cellpadding="10">';
+        for (let i = 0; i < money.length; i++) {
+            html += '<tr>';
+            html += '<td>' + money[i] + '</td>';
+            html += '<td>' + value[i] + '</td>';
+            html += '</tr>';
+        }
+        document.getElementById('container').innerHTML = html + '</table>';
+        let array = [];
+// бере рандомні числа від 0-6 з рандом.орг і через 5 сек масив стирає і перезаписує знов
+        let time = setInterval(function first() {
+            console.log(array);
+            array.splice(0,5);
+            for (i = 0; i < 5; i++) {
+                fetch('https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new')
+                    .then(response => {
+                        response.json()
+                            .then(data => array.push(data));
+                    })
+            }
+        }, 5000)
+//  тут я хотів змінювати дані в таблиці, але не вийшло
+            /* function change() {
+                    let money = ['USA', 'Euro', 'RUB', 'GBR', 'BLR', 'USA/EURO'];
+                    value = array;
+                    let last = value[0] / value[1];
+                    value.push(last);
+                    let html = '<table border="1" cellpadding="10">';
+                    for (let i = 0; i < money.length; i++) {
+                        html += '<tr>';
+                        html += '<td>' + money[i] + '</td>';
+                        html += '<td>' + value[i] + '</td>';
+                        html += '</tr>';
+                    }
+                    document.getElementById('container').innerHTML = html + '</table>'
+                };
+change();
+
+*/
+
+</script>
+</body>
+</html>
