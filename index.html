@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="container"></div>
+<script>
+
+        let money = ['USA', 'Euro', 'RUB', 'GBR', 'BLR', 'USA/EURO'];
+        let value = [28, 32, 0.3, 40, 0.1];
+        let last = value[0] / value[1];
+        value.push(last);
+        let html = '<table border="1" cellpadding="10">';
+        for (let i = 0; i < money.length; i++) {
+            html += '<tr>';
+            html += '<td>' + money[i] + '</td>';
+            html += '<td>' + value[i] + '</td>';
+            html += '</tr>';
+        }
+        document.getElementById('container').innerHTML = html + '</table>';
+        let array = [];
+var promises = [];
+for ( i = 0; i < 5; i++){
+    promises.push(doFetch())
+}
+function doFetch() {
+    var wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    var repeat = (ms, func) => new Promise((resolve, reject) => {
+        const interval = setInterval(func, ms);
+        wait(ms).then(() => resolve(interval));
+        for (i = 0; i < 5; i++) {
+            fetch('https://www.random.org/integers/?num=1&min=1&max=6&col=1&base=10&format=plain&rnd=new')
+                .then(response => {
+                    response.json()
+                        .then(data => array.push(data));
+
+                })
+        }
+    })
+}
+    Promise.all(promises)
+        .then(() => {
+            for(i=0;i<5;i++){
+                repeat(5000, () => {
+                    let money = ['USA', 'Euro', 'RUB', 'GBR', 'BLR', 'USA/EURO'];
+                    value = array;
+                    let last = value[0] / value[1];
+                    value.push(last);
+                    let html = '<table border="1" cellpadding="10">';
+                    for (let i = 0; i < money.length; i++) {
+                        html += '<tr>';
+                        html += '<td>' + money[i] + '</td>';
+                        html += '<td>' + value[i] + '</td>';
+                        html += '</tr>';
+                    }
+                    document.getElementById('container').innerHTML = html + '</table>'
+                });;
+            }
+        })
+
+
+
+
+
+
+</script>
+</body>
+</html>
